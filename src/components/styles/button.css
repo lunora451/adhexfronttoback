@@ -1,0 +1,11 @@
+.button_white{
+    background-color: #fff;
+    color: var(--primary);
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.button_black{
+    background-color: #000;
+    color: var(--primary);
+    transition: color 0.3s, background-color 0.3s;
+}
