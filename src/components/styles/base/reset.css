@@ -6,6 +6,17 @@
 
   * {
     margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit; 
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -15,6 +26,9 @@
   }
 
   body {
+    font-size: 100%;
+    font-family: var(--bodyFont);
+    font-size: var(--bodyFontSize);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
@@ -61,3 +75,4 @@
   #__next {
     isolation: isolate;
   }
+

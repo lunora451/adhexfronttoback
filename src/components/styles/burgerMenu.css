@@ -1,0 +1,56 @@
+/* burger button 1 */
+
+  .lu-button-mobile{
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+    height: 3rem;
+    width: 3rem;
+    transition: transform 0.6s, background-color 0.3s;
+  }
+
+  .lu-box{
+    position: relative;
+    height: 1rem;
+    width: clamp(1.5rem, 2vw, 1.75rem);
+  }
+
+  .lu-line{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background-color: var(--backgroundColor);
+    height: 2px;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+
+  .lu-line1{
+    top: 0;
+    transition: transform 0.5s, top 0.3s, left 0.3s;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+  }
+
+  .lu-line2{
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: top 0.3s, left 0.3s, transform 0.5s;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  .lu-line3{
+    bottom: 0;
+    transition: bottom 0.3s, opacity 0.3s;
+  }

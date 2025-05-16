@@ -1,0 +1,35 @@
+html.dark-mode {
+    background: var(--backgroundColorDark);
+}
+
+html.dark-mode .lu-header {
+    color: var(--headerColorDark);
+}
+
+html.dark-mode .lu-p {
+    color: var(--bodyTextColorDark);
+}
+html.dark-mode .lu-li {
+    color: var(--headerColorDark);
+}
+html.dark-mode .lu-a {
+    color: var(--headerColorDark);
+}
+html.dark-mode .lu-a:hover {
+    color: var(--secondary);
+}
+html.dark-mode svg {
+    color: #fff;
+}
+
+html.dark-mode .lu-lineH{
+    display: block;
+    content: "";
+    border-bottom: 1px solid var(--headerColorDark);
+}
+  
+html.dark-mode .lu-lineV{
+content: "";
+border-right: 1px solid var(--headerColorDark);
+}
+

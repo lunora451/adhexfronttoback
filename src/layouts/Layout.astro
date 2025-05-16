@@ -1,5 +1,11 @@
 ---
-import "../components/styles/utils.css";
+import "../components/styles/base/reset.css";
+import "../components/styles/base/base.css";
+import "../components/styles/base/button.css";
+import "../components/styles/base/baseDark.css";
+import "../components/styles/burgerMenu.css";
+import "../components/styles/navbarLogo.css";
+import ThemeScript from "../components/darkMode/ThemeScript.astro";
 ---
 
 <!doctype html>
@@ -7,9 +13,10 @@ import "../components/styles/utils.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
+    <ThemeScript />
   </head>
   <body>
     <slot />
@@ -18,20 +25,61 @@ import "../components/styles/utils.css";
 
 <style is:global lang="scss">
   :root {
-    --primary-color: #333;
+    --primary: #001f3f;
+    --primaryLight: #43b7ff;
+    --secondary: #43b7ff;
+    --secondaryLight: #001f3f;
+    --headerColor: #1a1a1a;
+    --grey: #f7f7f7;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    --backgroundColor: #fff;
+    --errorColor: #c10e0a;
+    --paddingNavClamp: clamp(0.75rem, 2vw, 1.5rem);
+    --h5: 1.125rem;
+    --h4: 1.25rem;
+    --h3: 1.5rem;
+    --h2: clamp(1.9375rem, 3.9vw, 2.7rem);
+    --h1: 2.1875rem;
+    //--bodyFontSize: clamp(1rem, calc(2vw + 0.5rem), 1.125rem); //fat version 18px
+    --bodyFontSize: clamp(0.875rem, calc(0.5rem + 1vw), 1rem);
+    --headerFontSize: clamp(1rem, 2.6vw, 1.4rem);
+    --headerFontSize1024: clamp(0.875rem, 1.2vw, 1rem);
+    --headerFont: "Oswald-700", Arial, sans-serif;
+    --bodyFont: "Source Sans 3", Arial, sans-serif;
+    --navNeon: "Yellowtail", "Adjusted Verdana Fallback", "Verdana", sans-serif;
+
+    //darkmode
+    --primaryDark: #fff;
+    --backgroundColorDark: #030f18;
+    --bodyTextColorDark: #f0f0f0;
+    --headerColorDark: #fff;
   }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    max-width: 36.5rem;
-    width: 100%;
-    gap: clamp(3rem, 6vw, 4rem);
-    // padding: 0 10px;
-    // margin: auto;
-    // position: relative;
-    // width: 100%;
+  body {
+    // background-color: #000;
+  }
+  @font-face {
+    font-style: normal;
+    font-family: "Yellowtail";
+    font-weight: 400;
+    font-display: swap;
+    src: url("../assets/fonts/yellowtail_regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-style: normal;
+    font-family: "Oswald";
+    font-weight: 400;
+    font-display: swap;
+    src: url("../assets/fonts/oswald_regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-style: normal;
+    font-family: "Oswald";
+    font-weight: 700;
+    font-display: swap;
+    src: url("../assets/fonts/oswald_700.woff2") format("woff2");
   }
 </style>
