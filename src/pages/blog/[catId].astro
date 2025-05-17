@@ -1,0 +1,19 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const cattas = await getCollection("catta");
+
+  return cattas.map((indexCat) => ({
+    params: { catId: indexCat.id },
+  }));
+}
+
+const { catId } = Astro.params;
+const catData = await getEntry("catta", catId);
+---
+
+<Layout>
+  <p>the cat data is : {catData.data.title}</p>
+</Layout>
