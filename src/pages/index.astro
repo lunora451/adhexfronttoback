@@ -5,17 +5,22 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <h1>this is a try for php front to back</h1>
 
-  <button onclick="getUsers()"> get Users</button>
+  <button class="getUser"> get Users</button>
   <div class="getUsers"></div>
 </Layout>
 
 <script>
-  // pas de await dans l'histoire?
+  const button = document.querySelector(".getUser");
+
+  button.addEventListener("click", getUsers);
 
   async function getUsers() {
     try {
       //changer ca et go
-      const response = await fetch("http://localhost:8000/users");
+      console.log("start getUsers");
+      const response = await fetch(
+        "https://bisque-nightingale-969900.hostingersite.com/users"
+      );
 
       if (!response.ok) {
         throw new Error("Erreur HTTP: " + response.status);
