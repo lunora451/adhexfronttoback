@@ -10,6 +10,9 @@ $request_method = $_SERVER['REQUEST_METHOD'];
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $path = trim($path, '/');
 
+
+error_log("Path reçu : " . $path);
+
 switch ($path) {
     case 'users':
         if ($request_method == 'GET') {
