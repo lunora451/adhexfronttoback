@@ -1,5 +1,5 @@
 <?php
-$host = '176.128.201.96';
+$host = 'auth-db1423.hstgr.io';
 $dbname = 'u995161080_simpleDB';
 $username = 'u995161080_simpleUserDB';
 $password = 'xV5@kR&P0Nug';

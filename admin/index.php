@@ -15,6 +15,7 @@ error_log("Path reçu : " . $path);
 
 switch ($path) {
     case 'users':
+    case 'admin/index.php/users':
         if ($request_method == 'GET') {
             getUsers($pdo);
         }
@@ -28,20 +29,14 @@ switch ($path) {
 
     default:
         http_response_code(404);
-        echo json_encode(['error' => 'Route non trouvée']);
+        echo json_encode(['error' => $path]);
         break;
 }
 
 // Récupérer tous les utilisateurs
 function getUsers($pdo)
 {
-    global $db_error;
 
-    if ($pdo === null) {
-        http_response_code(500);
-        echo json_encode(['error' => 'Database connection failed: ' . $db_error]);
-        return;
-    }
 
     try {
         $stmt = $pdo->query("SELECT * FROM users");
