@@ -25,8 +25,8 @@ jobs:
       - name: Install, build, and upload your site output
         uses: radenpioneer/astro-ftp-deploy@v0.1.0
         with:
-          server: 147.93.92.245
-          username: u995161080bisquenightingale
+          server: ftp.bisque-nightingale-969900.hostingersite.com
+          username: u995161080.u995161080bisquenightingale
           password: w1#e;y^R8hHDR6>D
           directory: ./ # The path to upload to, on your FTP server, relative to your FTP root. Must end with trailing slash. (optional)
           # protocol: ftp # The protocol to use on your FTP server. (optional)
