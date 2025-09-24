@@ -28,7 +28,6 @@ import Layout from "../layouts/Layout.astro";
 
       const users = await response.json();
       console.log(users);
-      // displayUsers(users);
     } catch (error) {
       console.error("Erreur:", error);
       document.querySelector(".getUsers").innerHTML =
