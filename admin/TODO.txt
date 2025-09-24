@@ -1,0 +1,44 @@
+1) dans index.php on enleve le simplemdr pour mettre 
+le toastui editor 
+https://nhn.github.io/tui.editor/latest/tutorial-example02-editor-with-horizontal-preview
+chatgpt le poto va aider 
+
+-> faire le uploader de media
+
+2) au bouton post 
+    a) créer le fichier .md avec son frontmatter
+    title
+    slug,
+    date,
+    coverPicture,
+    lastModification (later when exist)
+    b) upload des image
+
+3) api.php = bdd -> out
+config.php -> out
+upload_image.php -> cloudinary -> out
+
+add_post.php
+-> dois faire 2 trucs
+ a) upload les images dans /src/assets/img/ (github)
+ b) upload le .md dans /src/data/[nameContent] (github)
+
+
+
+5) homepage
+    -> mes contenus
+    -> list différents content
+    -> supprimer/modifier option on them
+    -> ajouter contenu
+
+6) faire une connexion sécuriser
+7) sécuriser donner comme le token git
+
+
+
+-> iife/factory module / class
+-> avoir en mémoire le fetch/cURL
+-> regarder comment on créer des route comme je l'ai fait avec nodejs
+-> comment on créer route qui fait du sql et qu'on appelle la route avec cUrl est-ce que c'est bien comme ça que ca marche? 
+-> javascript add content -> https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events
+-> faire du javascript basic syntax pour savoir au moins l'affichage de données
