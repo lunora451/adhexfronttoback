@@ -23,7 +23,7 @@ add_post.php
  a) upload les images dans /src/assets/img/ (github)
  b) upload le .md dans /src/data/[nameContent] (github)
 
-
+w1#e;y^R8hHDR6>D
 
 5) homepage
     -> mes contenus
