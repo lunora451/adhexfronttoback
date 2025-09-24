@@ -35,6 +35,14 @@ switch ($path) {
 // Récupérer tous les utilisateurs
 function getUsers($pdo)
 {
+    global $db_error;
+
+    if ($pdo === null) {
+        http_response_code(500);
+        echo json_encode(['error' => 'Database connection failed: ' . $db_error]);
+        return;
+    }
+
     try {
         $stmt = $pdo->query("SELECT * FROM users");
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
